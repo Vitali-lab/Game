@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        margin: 0 auto;
+        width: 1440px;
+        font-family: Arial, Helvetica, sans-serif;
+        
+        }
+        h1 {
+            padding-top: 300px;
+            margin: 20px 0;
+            font-weight: 500;
+        }
+        button{
+            margin: 10px 0 0 10px;
+            width: 70px;
+            height: 30px;
+            background-color: bisque;
+            border: 1px solid black;
+            border-radius: 15px;
+            
+        }
+        input{
+            width: 200px;
+            height: 50px;
+            border-radius: 5px;
+            border-color: brown;
+            margin-left: 100px;
+        }
+        b{
+            display: block;
+            margin-top: 20px;
+        }
+        .div{
+            display: block;
+            text-align: center;
+            border: 1px solid black;
+        }
+        p{
+            display: block;
+            margin: 20px 0; 
+           
+        }
+        @media(max-width:430px)  {
+         body {
+        margin: 0 auto;
+        width: 430px;
+        font-size: 13px;
+        text-align: center;
+            
+        }
+        input{
+            width: 400px;
+            float: left;
+            height: 80px;
+            border-radius: 5px;
+            border-color: brown;
+            margin: 0 15px;
+            border-radius: 40px;
+            text-align: center;
+        }
+        button{
+            margin: 20px auto;
+            width: 200px;
+            height: 80px;
+            background-color: bisque;
+            border: 1px solid black;
+            border-radius: 15px;
+            
+        }
+        p,b{
+            font-size: 15px;
+        }
+        .div{
+            display: block;
+            text-align: center;
+            background-color: rgb(186, 187, 187);
+    }
+}
+    </style>
+</head>
+<body>
+<div class="div">
+    <h1>Угадай число от одного до ста</h1>
+    <input type="number" placeholder="Введите число от 0 до 100">
+    <button id="buttonGo">Ввод</button>
+    <button id="buttonRef">Refresh</button>
+    <b></b>
+    <p></p>
+</div>
+    <script src="wapp.js"></script>
+</body>
+</html>
