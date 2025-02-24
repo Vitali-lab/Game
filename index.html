@@ -68,7 +68,8 @@
             margin: 20px auto;
             width: 200px;
             height: 80px;
-            background-color: bisque;
+            background-color: rgba(41, 40, 40, 0.527);
+            color: white;
             border: 1px solid black;
             border-radius: 15px;
             
@@ -81,6 +82,26 @@
             text-align: center;
             background-color: rgb(186, 187, 187);
     }
+    .buttons{
+        display: grid;
+        grid-template-columns: 80px 80px 80px;
+        justify-content: center;
+        gap: 25px;
+
+        
+    }  
+    
+    .buttons button {
+        background-color: rgba(41, 40, 40, 0.527);
+        color: white;
+        width: 90px;
+
+    }
+    h1 {
+            padding-top: 150px;
+            margin: 10px 0;
+            font-weight: 500;
+        }
 }
     </style>
 </head>
@@ -92,6 +113,21 @@
     <button id="buttonRef">Refresh</button>
     <b></b>
     <p></p>
+    <div class="buttons" id="buttons" >
+        <button  id="1">1</button>
+        <button  id="2">2</button>
+        <button  id="3">3</button>
+        <button  id="4">4</button>
+        <button  id="5">5</button>
+        <button  id="6">6</button>
+        <button  id="7">7</button>
+        <button  id="8">8</button>
+        <button  id="9">9</button>
+        <button  id="0">0</button>
+    
+      
+       
+    </div>
 </div>
     <script src="wapp.js"></script>
 </body>
