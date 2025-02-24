@@ -69,3 +69,13 @@ buttonRef.addEventListener('click', () => window.location.reload());
 // }
 const buttonRef = document.getElementById('buttonRef')
 buttonRef.addEventListener('click', () => window.location.reload());
+
+const buttons = document.querySelectorAll('.buttons button')
+
+
+
+buttons.forEach(button => {button.addEventListener('click', function () {
+    const value = this.getAttribute('id');
+    if(value) { input.value += value}
+})
+})
