@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
+        /* body {
         margin: 0 auto;
         width: 1440px;
         font-family: Arial, Helvetica, sans-serif;
@@ -46,34 +46,51 @@
             margin: 20px 0; 
            
         }
-        @media(max-width:430px)  {
+        @media(max-width:430px)  { */
+
+        .color-change-2x{-webkit-animation:color-change-2x 2s linear infinite alternate both;animation:color-change-2x 2s linear infinite alternate both}
+        @-webkit-keyframes color-change-2x{0%{background:#19dcea}100%{background:#b22cff}}@keyframes color-change-2x{0%{background:#19dcea}100%{background:#b22cff}}
+
+        .bg-pan-right{-webkit-animation:bg-pan-right 8s both;animation:bg-pan-right 8s both}
+        @-webkit-keyframes bg-pan-top{0%{background-position:50% 100%}100%{background-position:50% 0}}@keyframes bg-pan-top{0%{background-position:50% 100%}100%{background-position:50% 0}}
+
          body {
         margin: 0 auto;
         width: 430px;
         font-size: 13px;
         text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        
             
         }
         input{
             width: 400px;
             float: left;
             height: 80px;
-            border-radius: 5px;
+            border: none;
             border-color: brown;
             margin: 0 15px;
-            border-radius: 40px;
             text-align: center;
+            background-color: rgb(186, 187, 187);
+            font-size: 20px;
+            
+            
         }
         button{
-            margin: 20px auto;
+            margin: 5px 5px;
+            
             width: 200px;
             height: 80px;
             background-color: rgba(41, 40, 40, 0.527);
             color: white;
             border: 1px solid black;
             border-radius: 15px;
+            font-size: 20px;
             
         }
+        
+
+
         p,b{
             font-size: 15px;
         }
@@ -81,12 +98,20 @@
             display: block;
             text-align: center;
             background-color: rgb(186, 187, 187);
+            opacity: 1;
+            border: 2px solid black;
+            border-radius: 15px;
+            margin-top: 100px;
+            
+            
     }
     .buttons{
         display: grid;
         grid-template-columns: 80px 80px 80px;
         justify-content: center;
-        gap: 25px;
+        gap: 20px;
+        padding-bottom: 200px;
+       
 
         
     }  
@@ -95,22 +120,41 @@
         background-color: rgba(41, 40, 40, 0.527);
         color: white;
         width: 90px;
+        
 
     }
+    .buttons button:last-child {
+       grid-column: 2;
+
+    }
+    button:active{
+        background-color: rgba(10, 10, 10, 0.527);
+        color: rgba(235, 0, 0, 0.76);
+        border: 1px solid rgb(235, 11, 11);
+    }
     h1 {
-            padding-top: 150px;
+            padding-top: 50px;
             margin: 10px 0;
             font-weight: 500;
+            font-size: 25px;
         }
-}
+
+        
+
+
+
+
+
+
+
     </style>
 </head>
-<body>
+<body class="color-change-2x">
 <div class="div">
-    <h1>Угадай число от одного до ста</h1>
-    <input type="number" readonly placeholder="Введите число от 0 до 100">
-    <button id="buttonGo">Ввод</button>
-    <button id="buttonRef">Refresh</button>
+    <h1 class="tracking-in-expand-fwd-top">Угадай число от одного до ста</h1>
+    <input  type="number" readonly  placeholder="Введите число от 0 до 100">
+    <button class=".bg-pan-right" id="buttonGo">Ввод</button>
+    <button class=".bg-pan-right" id="buttonRef">Начать заново</button>
     <b></b>
     <p></p>
     <div class="buttons" id="buttons" >
