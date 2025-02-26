@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
     <style>
+    
         /* body {
         margin: 0 auto;
         width: 1440px;
@@ -54,12 +56,29 @@
         .bg-pan-right{-webkit-animation:bg-pan-right 8s both;animation:bg-pan-right 8s both}
         @-webkit-keyframes bg-pan-top{0%{background-position:50% 100%}100%{background-position:50% 0}}@keyframes bg-pan-top{0%{background-position:50% 100%}100%{background-position:50% 0}}
 
+        .rotate-vert-center{-webkit-animation:rotate-vert-center .5s cubic-bezier(.455,.03,.515,.955) both;animation:rotate-vert-center .5s cubic-bezier(.455,.03,.515,.955) both}
+        @-webkit-keyframes rotate-vert-center{0%{-webkit-transform:rotateY(0);transform:rotateY(0)}100%{-webkit-transform:rotateY(360deg);transform:rotateY(360deg)}}@keyframes rotate-vert-center{0%{-webkit-transform:rotateY(0);transform:rotateY(0)}100%{-webkit-transform:rotateY(360deg);transform:rotateY(360deg)}}
+
+        .bounce-top{-webkit-animation:bounce-top .9s both;animation:bounce-top .9s both}
+
+        @-webkit-keyframes bounce-top{0%{-webkit-transform:translateY(-45px);transform:translateY(-45px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:1}24%{opacity:1}40%{-webkit-transform:translateY(-24px);transform:translateY(-24px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}65%{-webkit-transform:translateY(-12px);transform:translateY(-12px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}82%{-webkit-transform:translateY(-6px);transform:translateY(-6px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}93%{-webkit-transform:translateY(-4px);transform:translateY(-4px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}25%,55%,75%,87%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}100%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;opacity:1}}@keyframes bounce-top{0%{-webkit-transform:translateY(-45px);transform:translateY(-45px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:1}24%{opacity:1}40%{-webkit-transform:translateY(-24px);transform:translateY(-24px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}65%{-webkit-transform:translateY(-12px);transform:translateY(-12px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}82%{-webkit-transform:translateY(-6px);transform:translateY(-6px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}93%{-webkit-transform:translateY(-4px);transform:translateY(-4px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}25%,55%,75%,87%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}100%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;opacity:1}}
+
+
+        .tracking-in-contract{-webkit-animation:tracking-in-contract .8s cubic-bezier(.215,.61,.355,1.000) both;animation:tracking-in-contract .8s cubic-bezier(.215,.61,.355,1.000) both}
+        @-webkit-keyframes tracking-in-contract{0%{letter-spacing:1em;opacity:0}40%{opacity:.6}100%{letter-spacing:normal;opacity:1}}@keyframes tracking-in-contract{0%{letter-spacing:1em;opacity:0}40%{opacity:.6}100%{letter-spacing:normal;opacity:1}}
+
+        .roll-out-right{-webkit-animation:roll-out-right .6s ease-in both;animation:roll-out-right .6s ease-in both}
+
+        @-webkit-keyframes roll-out-right{0%{-webkit-transform:translateX(0) rotate(0deg);transform:translateX(0) rotate(0deg);opacity:1}100%{-webkit-transform:translateX(1000px) rotate(540deg);transform:translateX(1000px) rotate(540deg);opacity:0}}@keyframes roll-out-right{0%{-webkit-transform:translateX(0) rotate(0deg);transform:translateX(0) rotate(0deg);opacity:1}100%{-webkit-transform:translateX(1000px) rotate(540deg);transform:translateX(1000px) rotate(540deg);opacity:0}}
+
          body {
         margin: 0 auto;
         width: 430px;
-        font-size: 13px;
+        font-size: 10px;
         text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:Arial, Helvetica, sans-serif;
+        
+        
         
             
         }
@@ -68,13 +87,15 @@
             float: left;
             height: 80px;
             border: none;
-            border-color: brown;
             margin: 0 15px;
             text-align: center;
             background-color: rgb(186, 187, 187);
             font-size: 20px;
             position: relative;
             left: 20px;
+            cursor: none;
+            margin-bottom: 20px;
+            
             
             
         }
@@ -97,7 +118,7 @@
             font-size: 15px;
         }
         .div{
-/*             position: fixed; */
+            position: fixed;
             display: block;
             text-align: center;
             background-color: rgb(186, 187, 187);
@@ -111,7 +132,7 @@
     }
     .buttons{
         display: grid;
-        grid-template-columns: 80px 80px 80px;
+        grid-template-columns: 90px 90px 90px;
         justify-content: center;
         gap: 20px;
         padding-bottom: 200px;
@@ -128,6 +149,10 @@
 
     }
     .buttons button:last-child {
+       grid-column: 3;
+
+    }
+    .buttons button:nth-child(10) {
        grid-column: 2;
 
     }
@@ -159,8 +184,10 @@
     <input  type="number" readonly  placeholder="Введите число от 0 до 100">
     <button class=".bg-pan-right" id="buttonGo">Ввод</button>
     <button class=".bg-pan-right" id="buttonRef">Начать заново</button>
+    
     <b></b>
     <p></p>
+    <p id="gueses"></p>
     <div class="buttons" id="buttons" >
         <button  id="1">1</button>
         <button  id="2">2</button>
@@ -172,6 +199,7 @@
         <button  id="8">8</button>
         <button  id="9">9</button>
         <button  id="0">0</button>
+        <button  id="C">C</button>
     
       
        
