@@ -33,12 +33,12 @@ function getRandomNumber () {
 
       if (input.value == randomNum) {
     document.querySelector('p').textContent = 'Вы угадали!' 
-    document.querySelector('p').style.color = '#0df519b2'
+    document.querySelector('p').style.color = 'black'
     document.querySelector('p').style.fontSize = '20px'
     document.querySelector('p').style.textTransform = 'uppercase'
     document.querySelector('p').style.backgroundColor = '#2e2c2c79'
     document.querySelector('p').style.height = '30px'
-    document.querySelector('p').classList.add('bounce-top')
+    document.querySelector('p').classList.add('color-change-2x')
     
     
     setGameOver()
